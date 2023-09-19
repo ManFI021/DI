@@ -12,16 +12,16 @@
 
 ## Indice
 
-- [Introduccion](#introduction)
-- [Features](#features)
+- [Introduccion](#introduccion)
+- [Descripcion del Proyecto](#descripcion)
 - [Feedback](#feedback)
 - [Contributors](#contributors)
-- [Build Process](#build-process)
+- [Tecnologias Encontradas](#tegnologias)
 - [Backers](#backers-)
 - [Sponsors](#sponsors-)
 - [Acknowledgments](#acknowledgments)
 
-## Introduction
+## Introduccion
 
 
 Comprobar desde un punto mas amplio la materia relacionada con a asignatura conjuntamente de sus tegnologías.
