@@ -15,11 +15,10 @@
 - [Introduccion](#introduccion)
 - [Descripcion del Proyecto](#descripcion)
 - [Feedback](#feedback)
-- [Contributors](#contributors)
 - [Tecnologias Encontradas](#tegnologias)
-- [Backers](#backers-)
+- [Contribuidores](#contribuidores)
 - [Sponsors](#sponsors-)
-- [Acknowledgments](#acknowledgments)
+
 
 ## Introduccion
 
@@ -27,6 +26,10 @@
 Comprobar desde un punto mas amplio la materia relacionada con a asignatura conjuntamente de sus tegnologías.
 
 **Python**
+
+<imagen>
+  
+**Github**
 
 <imagen>
 
@@ -44,9 +47,7 @@ Dentro de la asignatura podemos encontrar:
 ## Feedback
 
 
-## Contributors
 
-This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification and is brought to you by these [awesome contributors](./CONTRIBUTORS.md).
 
 ## Tegnologías Encontradas:
 
@@ -54,9 +55,11 @@ This project follows the [all-contributors](https://github.com/kentcdodds/all-co
 
 **Development Keys**: 
 
-
-
 <a href="https://opencollective.com/git-point#backers" target="_blank"><img src="https://opencollective.com/git-point/backers.svg?width=890"></a>
+
+## Contributors
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification and is brought to you by these [awesome contributors](./CONTRIBUTORS.md).
 
 ## Sponsors [![Sponsors on Open Collective](https://opencollective.com/git-point/sponsors/badge.svg)](#sponsors)
 
