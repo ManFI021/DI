@@ -27,12 +27,14 @@ Comprobar desde un punto mas amplio la materia relacionada con la asignatura, co
 Entre ellas tenemos:
 
 **Python**
-https://www.codigofuente.org/wp-content/uploads/2018/10/pythonpro.jpg
+![pythonpro](https://github.com/ManFI021/DI/assets/145338541/8f9ee332-f451-4506-8e1f-4d000fe88bed)
+
 - Python es un lenguaje de programación orientado a objetos de alto nivel y fácil de interpretar con sintaxis fácil de leer.
 <imagen>
   
 **Github**
-https://cdn.thelivemirror.com/wp-content/uploads/2018/08/SnapChat-GitHub-Leak.jpg
+![SnapChat-GitHub-Leak](https://github.com/ManFI021/DI/assets/145338541/50ef2174-507a-4edb-8693-de3e3e2c1601)
+
 - Github es un portal creado para alojar el código de las aplicaciones de cualquier desarrollador.La web utiliza el sistema de control de versiones Git diseñado por Linus Torvalds, que permite a desarrolladores  administrar su proyecto de una manera mas ordenada de manera remota.
 <imagen>
 
