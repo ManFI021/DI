@@ -13,9 +13,9 @@
 ## Indice
 
 - [Introduccion](#introduccion)
-- [Descripcion del Proyecto](#descripcion)
+- [Descripcion del Proyecto](#descripcion-del-proyecto)
 - [Feedback](#feedback)
-- [Tecnologias Encontradas](#tegnologias)
+- [Tecnologias Encontradas](#tegnologias-encontradas)
 - [Contribuidores](#contribuidores)
 - [Sponsors](#sponsors-)
 
@@ -23,14 +23,17 @@
 ## Introduccion
 
 
-Comprobar desde un punto mas amplio la materia relacionada con a asignatura conjuntamente de sus tegnologías.
+Comprobar desde un punto mas amplio la materia relacionada con la asignatura, conjuntamente de sus tegnologías.
+Entre ellas tenemos:
 
 **Python**
-
+https://www.codigofuente.org/wp-content/uploads/2018/10/pythonpro.jpg
+- Python es un lenguaje de programación orientado a objetos de alto nivel y fácil de interpretar con sintaxis fácil de leer.
 <imagen>
   
 **Github**
-
+https://cdn.thelivemirror.com/wp-content/uploads/2018/08/SnapChat-GitHub-Leak.jpg
+- Github es un portal creado para alojar el código de las aplicaciones de cualquier desarrollador.La web utiliza el sistema de control de versiones Git diseñado por Linus Torvalds, que permite a desarrolladores  administrar su proyecto de una manera mas ordenada de manera remota.
 <imagen>
 
 ## Descripcion del Proyecto
