@@ -1,9 +1,7 @@
-from tkinter import ttk,Button
+from tkinter import Tk
+from main import MainWindow
 
-class MainWindow:
-    def on_button_click(self):
-        pass
-    def __init__(self,root):
-        self.root = root
-        self.button = ttk.Button(self.root,text="Accion",command= self.on_button_click)
-        self.button.pack()
+if __name__ == "__main__":
+    root = Tk()
+    app = MainWindow(root)
+    root.mainloop()
