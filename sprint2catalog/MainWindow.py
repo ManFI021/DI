@@ -30,3 +30,8 @@ if __name__ == "__main__":
     root = Tk()
     app = MainWindow(root)
     root.mainloop()
+
+def launch_main_window(json_data):
+    root = tk.Tk()
+    app = MainWindow(root,json_data)
+    root.mainloop()     

@@ -2,6 +2,7 @@ import threading
 import requests
 import tkinter as tk
 from tkinter import ttk
+from MainWindow import launch_main_window
 
 
 class LoadingWindow:
@@ -23,7 +24,7 @@ class LoadingWindow:
         self.draw_progress_circle(self.progress)
 
         self.update_progress_circle()
-
+        self.start_fetching_thread()
        
         # self.thread = threading.Thread(target=self.fetch_json_data)
         # self.thread.start()
@@ -41,3 +42,14 @@ class LoadingWindow:
             self.progress = 0
         self.draw_progress_circle(self.progress)
         self.root.after(100, self.update_progress_circle)
+    
+    def fetch_json_data(self):
+        response = requests.get("https://raw.githubusercontent.com/ManFI021/DI/main/catalog.json")
+        if response.status_code == 200:
+            json_data = response.json()
+            self.root.quit()
+            launch_main_window(json_data)
+    
+    def start_fetching_thread(self):
+        fetch_thread = threading.Thread(target=self.fetch_json_data)
+        fetch_thread.start()      
