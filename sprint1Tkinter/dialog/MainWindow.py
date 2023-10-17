@@ -3,6 +3,7 @@ from Cell import Cell
 import tkinter as tk
 from detail_window import new_ventana_desc
 
+
 class MainWindow:
     image_references = []
     def on_button_clicked(self, cell):
