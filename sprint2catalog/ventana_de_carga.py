@@ -25,9 +25,9 @@ class LoadingWindow:
 
         self.update_progress_circle()
         self.start_fetching_thread()
+        self.fetch_json_data()
+        self.check_thread()
        
-        # self.thread = threading.Thread(target=self.fetch_json_data)
-        # self.thread.start()
 
     def draw_progress_circle(self, progress):
         self.canvas.delete("progress")
@@ -46,10 +46,17 @@ class LoadingWindow:
     def fetch_json_data(self):
         response = requests.get("https://raw.githubusercontent.com/ManFI021/DI/main/catalog.json")
         if response.status_code == 200:
-            json_data = response.json()
-            self.root.quit()
-            launch_main_window(json_data)
+            self.json_data = response.json()
+            self.finished = True
+
     
     def start_fetching_thread(self):
         fetch_thread = threading.Thread(target=self.fetch_json_data)
-        fetch_thread.start()      
+        fetch_thread.start()
+
+    def check_thread(self):
+        if self.finished:
+            self.root.destroy()
+            launch_main_window(self.json_data)
+        else:
+            self.root.after(100,self.check_thread)              
