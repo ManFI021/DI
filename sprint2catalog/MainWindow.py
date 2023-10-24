@@ -9,6 +9,7 @@ import requests
 class MainWindow:
     image_references = []
     def on_button_clicked(self, cell):
+        #cell argument error arreglado (self)
         new_ventana_desc(self,cell)
 
     def __init__(self,root,json_data):
@@ -25,10 +26,33 @@ class MainWindow:
         x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
         y = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
         self.root.geometry(f"+{int(x)}+{int(y)}")
+       
+        barra_menus = tk.Menu()
+        # Crear el primer menú.
+        menu_archivo = tk.Menu(barra_menus, tearoff=False)
+        menu_archivo.add_command(
+        label="Acerca de",
+            accelerator="",
+            #funcion descriptiva del desarrollador
+            command=mensaje_extres
+        )
+        # Asociar el atajo del teclado del menú "Acerca de".
+        root.bind_all("<Control-n>", mensaje_extres)
+        # Agregarlo a la barra.
+        barra_menus.add_cascade(menu=menu_archivo, label="Ayuda")
+        root.config(menu=barra_menus)
+
+
+def mensaje_extres(event=None):
+    messagebox.showinfo("Mensaje","Lo que llevo sufrido en este boletín no tiene nombre :)")
+       
+
 if __name__ == "__main__":
     root = Tk()
     app = MainWindow(root)
+    
     root.mainloop()
+
 def load_image_from_url(url):
     response = requests.get(url)
     img_data = Image.open(BytesIO(response.content))
