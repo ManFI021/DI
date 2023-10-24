@@ -2,14 +2,15 @@ import threading
 import requests
 import tkinter as tk
 from tkinter import ttk
-from MainWindow import launch_main_window
+from MainWindow import MainWindow
+
 
 
 class LoadingWindow:
     def __init__(self, root):
         self.root = root
         self.root.title("Cargando...")
-        self.root.resizable(False, False)
+        
 
         self.label = tk.Label(self.root, text="Cargando datos...", font=("Arial", 14))
         self.label.pack(side=tk.TOP, pady=10)
@@ -27,6 +28,10 @@ class LoadingWindow:
         self.start_fetching_thread()
         self.fetch_json_data()
         self.check_thread()
+
+        x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
+        y = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
+        self.root.geometry(f"+{int(x)}+{int(y)}")
        
 
     def draw_progress_circle(self, progress):
@@ -57,6 +62,11 @@ class LoadingWindow:
     def check_thread(self):
         if self.finished:
             self.root.destroy()
-            launch_main_window(self.json_data)
+            self.launch_main_window(self.json_data)
         else:
-            self.root.after(100,self.check_thread)              
+            self.root.after(100,self.check_thread)      
+    #Cambio método en MainWindow -> ventana_de_carga
+    def launch_main_window(self,json_data):
+        root = tk.Tk()
+        app = MainWindow(root,json_data)
+        root.mainloop()                     
