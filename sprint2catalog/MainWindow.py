@@ -1,4 +1,4 @@
-from tkinter import ttk, Tk, messagebox
+from tkinter import Frame, ttk, Tk, messagebox, Canvas, Scrollbar
 from Cell import Cell
 import tkinter as tk
 from detail_window import new_ventana_desc
@@ -14,17 +14,42 @@ class MainWindow:
 
     def __init__(self,root,json_data):
         self.root = root
-        self.root.title("MainWindow")        
-        #for each crea celdas por objeto json
-        self.cells = [Cell(cell['name'],load_image_from_url(cell['image_url']),cell['description']) for cell in json_data]
+        self.root.title("MainWindow")
+        
+        # Canvas para scrolling
+        self.canvas = Canvas(root)
+        self.scrollbar= Scrollbar(self.root,orient="vertical",command=self.canvas.yview)
+        self.scrollable_frame = Frame(self.canvas)
+        
+        # ScrollBar Configuracion
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(
+                scrollregion=self.canvas.bbox("all")
+            )
+        )
+        
+        # Frame dentro del canvas para cada celda
+        self.canvas.create_window((0,0),window=self.scrollable_frame,anchor="nw")
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        
+         #for each crea celdas por objeto json
+        self.cells = [Cell(cell['name'], load_image_from_url(cell['image_url']), cell['description']) for cell in json_data]
+        
         for i, cell in enumerate(self.cells):
-            self.image_references.append(cell.image_tk)
-            label = ttk.Label(root, image=cell.image_tk, text=cell.title, compound=tk.BOTTOM)
+            label = ttk.Label(self.scrollable_frame, image=cell.image_tk, text=cell.title, compound=tk.BOTTOM)
             label.grid(row=i, column=0)
             label.bind("<Button-1>", lambda event, celda=cell: self.on_button_clicked(celda))
-        #redimension de Mainwindow 
-        x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
-        y = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
+        
+        self.canvas.grid(row=0,column=0,sticky="nsew")
+        self.scrollbar.grid(row=0,column=1,sticky="ns")
+
+        self.root.grid_rowconfigure(0,weight=1)
+        self.root.grid_columnconfigure(0,weight=1)
+
+        # Centrar celdas
+        x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth()) / 2
+        y = (self.root.winfo_screenheight() - self.root.winfo_reqheight()) / 2
         self.root.geometry(f"+{int(x)}+{int(y)}")
        
         barra_menus = tk.Menu()
@@ -58,8 +83,3 @@ def load_image_from_url(url):
     img_data = Image.open(BytesIO(response.content))
     img = ImageTk.PhotoImage(img_data)
     return img
-
-
-# x = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
-# y = (self.root.winfo_screenwidth() - self.root.winfo_reqwidth())/2
-# self.root.geometry(f"+{int(x)}+{int(y)}")
