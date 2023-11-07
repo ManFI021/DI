@@ -1,0 +1,23 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable circular_background
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable pingu
+id btnNavegarDetalle
+id descripcionTextView
+id imagenView
+id meGustaButton
+id tituloTextView
+layout activity_catalog
+layout activity_main
+layout detail_activity
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.MyCatalog
+style Theme.MyCatalog
+xml backup_rules
+xml data_extraction_rules
