@@ -1,33 +1,15 @@
 package com.example.mycatalog;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 public class DetailActivity extends AppCompatActivity {
 
+    // Método onCreate se llama cuando se crea la actividad.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Establecer el diseño de la actividad desde el archivo XML.
         setContentView(R.layout.detail_activity);
-
-        // Obtener referencias a los elementos de la interfaz de usuario
-        TextView tituloTextView = findViewById(R.id.tituloTextView);
-        ImageView imagenView = findViewById(R.id.imagenView);
-        TextView descripcionTextView = findViewById(R.id.descripcionTextView);
-        Button meGustaButton = findViewById(R.id.meGustaButton);
-        meGustaButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Aquí puedes agregar el código para manejar el evento del botón "Me gusta".
-            }
-        });
-        tituloTextView.setText("Pingu");
-        descripcionTextView.setText("Sinceramente demuestra mi frustación con tantos trabajos de manera no proporcional a horas de sueño :)");
-        imagenView.setImageResource(R.drawable.pingu);
     }
 }
