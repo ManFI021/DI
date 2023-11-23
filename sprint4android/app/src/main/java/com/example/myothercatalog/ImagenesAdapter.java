@@ -25,13 +25,16 @@ public class ImagenesAdapter extends RecyclerView.Adapter<ImagenesViewHolder> {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.imagenes_viewholder, parent, false);
         return new ImagenesViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull ImagenesViewHolder holder, int position) {
-        holder.ShowData(imagenlist.get(position),activity);
-        DataModel dataModelPosition = imagenlist.get(position);
-        holder.ShowData(dataModelPosition,activity);
+        holder.ShowData(imagenlist.get(position), activity);
     }
+    //@Override
+    //public void onBindViewHolder(@NonNull ImagenesViewHolder holder, int position) {
+    //    holder.ShowData(imagenlist.get(position),activity);
+    //    DataModel dataModelPosition = imagenlist.get(position);
+    //    holder.ShowData(dataModelPosition,activity);
+    //}
 
     @Override
     public int getItemCount() {
