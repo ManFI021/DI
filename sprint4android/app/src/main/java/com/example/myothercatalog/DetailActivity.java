@@ -22,13 +22,24 @@ public class DetailActivity extends AppCompatActivity {
         if (intent != null) {
             String name = intent.getStringExtra("name");
             String imageUrl = intent.getStringExtra("imageUrl");
+            String description = intent.getStringExtra("description");
 
             // Muestra los datos en tu interfaz de usuario
             TextView nameTextView = findViewById(R.id.text_view);
+            TextView descriptionTextView = findViewById(R.id.description_text_view);
             ImageView imageView = findViewById(R.id.image_view);
 
-            nameTextView.setText(name);
-            Glide.with(this).load(imageUrl).into(imageView);
+            if (nameTextView != null) {
+                nameTextView.setText(name);
+            }
+
+            if (descriptionTextView != null) {
+                descriptionTextView.setText(description);
+            }
+
+            if (imageView != null) {
+                Glide.with(this).load(imageUrl).into(imageView);
+            }
         }
     }
 }
