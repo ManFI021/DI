@@ -1,9 +1,26 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.MyOtherCatalog" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!-- styles.xml -->
+<resources>
+
+    <!-- tema personalizado -->
+    <style name="TemaCustomizado" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Cambia el color de fondo -->
+        <item name="android:windowBackground">@color/colorFondo</item>
+
+        <!-- Cambia el color del texto -->
+        <item name="android:textStyle">@style/EstiloTexto</item>
+
+        <!-- Cambia el estilo de los botones -->
+        <item name="android:buttonStyle">@style/EstiloDeBoton</item>
     </style>
 
-    <style name="Theme.MyOtherCatalog" parent="Base.Theme.MyOtherCatalog" />
+    <!-- Estilo personalizado para los botones -->
+    <style name="EstiloDeBoton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/colorFondoBoton</item>
+        <item name="android:textColor">@color/colorTextoBotones</item>
+    </style>
+    <style name="EstiloTexto">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/colorTexto</item>
+    </style>
 </resources>
