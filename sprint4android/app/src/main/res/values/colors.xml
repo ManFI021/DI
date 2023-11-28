@@ -6,4 +6,8 @@
     <color name="colorTexto">#0F30D3</color>
     <color name="colorTextoBotones">#FDBBBB</color>
     <color name="colorFondoBoton">#EF3737</color>
+    <color name="colorLetraDetail">#FF6600</color>
+    <color name="colorFondoDetail">#FAD961</color>
+    <color name="colorTextoBotonDetail">#072EBC</color>
+    <color name="colorFondoBotonDetail">#05E1E1</color>
 </resources>

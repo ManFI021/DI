@@ -5,14 +5,11 @@
     <style name="TemaCustomizado" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Cambia el color de fondo -->
         <item name="android:windowBackground">@color/colorFondo</item>
-
         <!-- Cambia el color del texto -->
-        <item name="android:textStyle">@style/EstiloTexto</item>
-
+        <item name="android:textAppearance">@style/EstiloTexto</item>
         <!-- Cambia el estilo de los botones -->
         <item name="android:buttonStyle">@style/EstiloDeBoton</item>
     </style>
-
     <!-- Estilo personalizado para los botones -->
     <style name="EstiloDeBoton" parent="Widget.AppCompat.Button">
         <item name="android:background">@color/colorFondoBoton</item>

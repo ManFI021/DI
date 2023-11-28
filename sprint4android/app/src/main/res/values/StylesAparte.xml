@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Estilo de la aplicación -->
+    <style name="LetraColor">
+        <item name="android:textSize">15sp</item>
+        <item name="android:editTextColor">@color/colorLetraDetail</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="FondoDetail">
+        <item name="android:background">@color/colorFondoDetail</item>
+    </style>
+    <style name="EstiloDeBotonDetail" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/colorFondoBotonDetail</item>
+        <item name="android:textColor">@color/colorTextoBotonDetail</item>
+    </style>
+</resources>
